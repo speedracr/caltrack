@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  calories_per_unit: 9.99
+  calories_per_g: 9.99
+  macros_carbs: 9.99
+  macros_protein: 9.99
+  macros_fat: 9.99
+
+two:
+  name: MyString
+  calories_per_unit: 9.99
+  calories_per_g: 9.99
+  macros_carbs: 9.99
+  macros_protein: 9.99
+  macros_fat: 9.99
