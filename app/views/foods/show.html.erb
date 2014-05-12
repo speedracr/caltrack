@@ -1,34 +1,44 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="large-8 columns">
 
-<p>
-  <strong>Name:</strong>
-  <%= @food.name %>
-</p>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Calories per unit:</strong>
-  <%= @food.calories_per_unit %>
-</p>
+    <p>
+      <strong>Name:</strong>
+      <%= @food.name %>
+    </p>
 
-<p>
-  <strong>Calories per g:</strong>
-  <%= @food.calories_per_g %>
-</p>
+    <p>
+      <strong>Calories per unit:</strong>
+      <%= @food.calories_per_unit %>
+    </p>
 
-<p>
-  <strong>Macros carbs:</strong>
-  <%= @food.macros_carbs %>
-</p>
+    <p>
+      <strong>Calories per g:</strong>
+      <%= @food.calories_per_g %>
+    </p>
 
-<p>
-  <strong>Macros protein:</strong>
-  <%= @food.macros_protein %>
-</p>
+    <p>
+      <strong>Macros carbs:</strong>
+      <%= @food.macros_carbs %>
+    </p>
 
-<p>
-  <strong>Macros fat:</strong>
-  <%= @food.macros_fat %>
-</p>
+    <p>
+      <strong>Macros protein:</strong>
+      <%= @food.macros_protein %>
+    </p>
 
-<%= link_to 'Edit', edit_food_path(@food) %> |
-<%= link_to 'Back', foods_path %>
+    <p>
+      <strong>Macros fat:</strong>
+      <%= @food.macros_fat %>
+    </p>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-8 columns">
+    <%= link_to 'Edit', edit_food_path(@food) %> |
+    <%= link_to 'Back', foods_path %>
+  </div>
+</div>
