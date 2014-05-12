@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140509131146) do
+ActiveRecord::Schema.define(version: 20140512104340) do
 
   create_table "foods", force: true do |t|
     t.string   "name"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 20140509131146) do
     t.decimal  "macros_carbs"
     t.decimal  "macros_protein"
     t.decimal  "macros_fat"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "minimeals", force: true do |t|
+    t.integer  "fooditem"
+    t.decimal  "grams"
+    t.integer  "user"
+    t.date     "date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

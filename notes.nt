@@ -1,0 +1,6 @@
+   Syntax for <select> form builder> (doesn't work so far...)
+
+    <div class="field">
+      <%= # f.label :fooditem %><br>
+      <%= # f.select (:fooditem_id, [ ['1', 1] ['2',2] ]) %>
+    </div>
