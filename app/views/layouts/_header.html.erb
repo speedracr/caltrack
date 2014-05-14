@@ -1,7 +1,9 @@
 <div class="row">
   <div class="large-12 columns">
   		<%= link_to 'Homepage', homepage_path %>
-  		
+   		<%= link_to 'Minimeals', minimeals_path %>
+ 		
+
 		<% if user_signed_in? %>
 			<%= current_user.username.capitalize %>
 			<%= link_to 'Log out', destroy_user_session_path, method: :delete %>

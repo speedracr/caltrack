@@ -71,6 +71,6 @@ class MinimealsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def minimeal_params
-      params.require(:minimeal).permit(:fooditem, :grams, :user, :date)
+      params.require(:minimeal).permit(:food, :grams, :user, :date)
     end
 end

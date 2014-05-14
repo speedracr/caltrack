@@ -5,7 +5,7 @@
     <table>
       <thead>
         <tr>
-          <th>Fooditem</th>
+          <th>Food</th>
           <th>Grams</th>
           <th>User</th>
           <th>Date</th>
@@ -16,9 +16,9 @@
       <tbody>
         <% @minimeals.each do |minimeal| %>
           <tr>
-            <td><%= minimeal.fooditem %></td>
+            <td><%= minimeal.food.name.capitalize %></td>
             <td><%= minimeal.grams %></td>
-            <td><%= minimeal.user %></td>
+            <td><%= minimeal.user.username.capitalize %></td>
             <td><%= minimeal.date %></td>
             <td><%= link_to 'Show', minimeal %></td>
             <td><%= link_to 'Edit', edit_minimeal_path(minimeal) %></td>

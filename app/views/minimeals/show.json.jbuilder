@@ -1,1 +1,1 @@
-json.extract! @minimeal, :id, :fooditem, :grams, :user, :date, :created_at, :updated_at
+json.extract! @minimeal, :id, :food, :grams, :user, :date, :created_at, :updated_at

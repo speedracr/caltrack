@@ -18,7 +18,7 @@ class MinimealsControllerTest < ActionController::TestCase
 
   test "should create minimeal" do
     assert_difference('Minimeal.count') do
-      post :create, minimeal: { date: @minimeal.date, fooditem: @minimeal.fooditem, grams: @minimeal.grams, user: @minimeal.user }
+      post :create, minimeal: { date: @minimeal.date, food: @minimeal.food, grams: @minimeal.grams, user: @minimeal.user }
     end
 
     assert_redirected_to minimeal_path(assigns(:minimeal))
@@ -35,7 +35,7 @@ class MinimealsControllerTest < ActionController::TestCase
   end
 
   test "should update minimeal" do
-    patch :update, id: @minimeal, minimeal: { date: @minimeal.date, fooditem: @minimeal.fooditem, grams: @minimeal.grams, user: @minimeal.user }
+    patch :update, id: @minimeal, minimeal: { date: @minimeal.date, food: @minimeal.food, grams: @minimeal.grams, user: @minimeal.user }
     assert_redirected_to minimeal_path(assigns(:minimeal))
   end
 

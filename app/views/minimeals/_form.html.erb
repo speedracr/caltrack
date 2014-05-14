@@ -13,13 +13,8 @@
     <% end %>
 
     <div class="field">
-      <%= f.label :fooditem %><br>
-      <%= f.number_field :fooditem %>
-    </div>
-
-    <div class="field">
-      <%= f.label :fooditem %><br>
-      <%= f.select(:fooditem, Food.all.collect { |food| [food.name, food.id] }) %>
+      <%= f.label :food %><br>
+      <%= f.select(:food, Food.all.collect { |food| [food.name, food.id] }) %>
     </div>
 
     <div class="field">
@@ -31,6 +26,7 @@
       <%= f.label :date %><br>
       <%= f.date_select :date %>
     </div>
+
     <div class="actions">
       <%= f.submit :class => ['button', 'radius', 'small'] %>
     </div>
