@@ -5,6 +5,7 @@ class MinimealsController < ApplicationController
   # GET /minimeals.json
   def index
     @minimeals = Minimeal.all
+    @food = Food.all
   end
 
   # GET /minimeals/1
@@ -25,12 +26,13 @@ class MinimealsController < ApplicationController
   # POST /minimeals
   # POST /minimeals.json
   def create
+    # byebug
     @minimeal = Minimeal.new(minimeal_params)
     @minimeal.user_id = current_user.id
 
     respond_to do |format|
       if @minimeal.save
-        format.html { redirect_to @minimeal, notice: 'Minimeal was successfully created.' }
+        format.html { redirect_to minimeals_url, notice: 'Minimeal was successfully created.' }
         format.json { render :show, status: :created, location: @minimeal }
       else
         format.html { render :new }
@@ -44,7 +46,7 @@ class MinimealsController < ApplicationController
   def update
     respond_to do |format|
       if @minimeal.update(minimeal_params)
-        format.html { redirect_to @minimeal, notice: 'Minimeal was successfully updated.' }
+        format.html { redirect_to minimeals_url, notice: 'Minimeal was successfully updated.' }
         format.json { render :show, status: :ok, location: @minimeal }
       else
         format.html { render :edit }
@@ -71,6 +73,6 @@ class MinimealsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def minimeal_params
-      params.require(:minimeal).permit(:food, :grams, :user, :date)
+      params.require(:minimeal).permit(:food_id, :grams, :user, :date)
     end
 end

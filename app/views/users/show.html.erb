@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="large-12 columns">
+		<p id="notice"><%= notice %></p>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="large-12 columns">
+		<p>
+		  <strong>Welcome, <%= @user.username.capitalize %>!</strong>
+		</p>
+		<p>This is what we have been tracking for you these days:</p>
+		<p><img src=<%= @user.twitter_profileimage %> alt=""></p>
+	</div>
+</div>

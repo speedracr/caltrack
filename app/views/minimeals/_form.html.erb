@@ -13,8 +13,8 @@
     <% end %>
 
     <div class="field">
-      <%= f.label :food %><br>
-      <%= f.select(:food, Food.all.collect { |food| [food.name, food.id] }) %>
+      <%= f.label :food_id %><br>
+      <%= f.select(:food_id, Food.all.collect { |food| [food.name, food.id] }) %>
     </div>
 
     <div class="field">

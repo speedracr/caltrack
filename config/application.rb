@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module Caltrack
   class Application < Rails::Application
+
+  config.autoload_paths += [config.root.join('lib').to_s]  
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

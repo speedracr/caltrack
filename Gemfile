@@ -17,5 +17,8 @@ gem 'flickraw'
 gem 'devise'
 gem 'foundation-rails'
 
+gem 'byebug'
+gem 'twitter'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]

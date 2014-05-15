@@ -32,6 +32,9 @@ GEM
     bcrypt-ruby (3.1.2-x86-mingw32)
     buftok (0.2.0)
     builder (3.2.2)
+    byebug (2.7.0)
+      columnize (~> 0.3)
+      debugger-linecache (~> 1.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -39,6 +42,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    columnize (0.3.6)
+    debugger-linecache (1.2.0)
     devise (3.1.1)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -153,6 +158,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  byebug
   coffee-rails (~> 4.0.0)
   devise
   flickraw

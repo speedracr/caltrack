@@ -16,13 +16,16 @@
       <tbody>
         <% @minimeals.each do |minimeal| %>
           <tr>
-            <td><%= minimeal.food.name.capitalize %></td>
+            <td>  <% if minimeal.food.present? %>
+                  <%= link_to minimeal.food.name.capitalize, food_path(minimeal.food.id) %>
+                  <% end %>
+            </td>
             <td><%= minimeal.grams %></td>
             <td><%= minimeal.user.username.capitalize %></td>
             <td><%= minimeal.date %></td>
             <td><%= link_to 'Show', minimeal %></td>
             <td><%= link_to 'Edit', edit_minimeal_path(minimeal) %></td>
-            <td><%= link_to 'Destroy', minimeal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Destroy', minimeal, method: :delete, data: { confirm: 'You sure, Jimmy?' } %></td>
           </tr>
         <% end %>
       </tbody>
